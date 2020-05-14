@@ -3,14 +3,20 @@ import {
     StyleSheet,
     Text,
     View,
+    Button,
 } from 'react-native';
+import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/AntDesign';
 import { TrainingIcon } from "../assets/icon.js";
 
-export default class Menu extends Component {
+import { movePage } from '../redux'
+import {store} from '../redux'
+
+export class Menu extends Component {
     constructor(props) {
         super(props);
     }
+
     render() {
         return (
         <View style={styles.container} >
@@ -20,7 +26,7 @@ export default class Menu extends Component {
                 <Text>トレーニング</Text>
             </View>
             <View>
-                <Icon name="questioncircleo" size={50} />
+                <Icon name="questioncircleo" size={50} onPress={() => this.props.movePage('inquiry')} />
                 <Text>問い合わせ</Text>
             </View>
             </View>
@@ -53,4 +59,17 @@ const styles = StyleSheet.create({
     },
   });
 
+const mapStateToProps = state => ({
+    // nameにjsonから取って来たデータを代入 
+    name: state.user.name
+})
   
+const mapDispatchToProps = {
+    // importしたactionCreator
+    movePage
+}
+  
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Menu)
