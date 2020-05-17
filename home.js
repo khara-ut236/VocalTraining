@@ -5,6 +5,9 @@ import {store} from './redux'
 
 import Menu from "./app/menu.js"
 import Inquiry from "./app/inquiry.js"
+// import Training from "./app/training.js"
+// import Method from "./app/method.js"
+// import Warning from "./app/warning.js"
 
 export class Home extends Component {
     constructor(props) {
@@ -14,11 +17,20 @@ export class Home extends Component {
         var state = store.getState()
         var name = state.user.name
         switch (name) {
-            case 'menu': return <Menu />
-            case 'inquiry': return <Inquiry />
+            case 'menu': 
+                return <Menu />
+            case 'inquiry': 
+                return <Inquiry />
+            // case 'training':
+            //     return <Training />
+            // case 'method':
+            //     return <Method />
+            // case 'warning':
+            //     return <Warning />
         }
     }
 }
+
 
 const mapStateToProps = state => ({
     // nameにjsonから取って来たデータを代入 
