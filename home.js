@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import { movePage } from './redux'
 import {store} from './redux'
 
-import Menu from "./app/menu.js"
-import Inquiry from "./app/inquiry.js"
-// import Training from "./app/training.js"
-// import Method from "./app/method.js"
-// import Warning from "./app/warning.js"
+import Menu from "./app/menu"
+import Inquiry from "./app/inquiry"
+import Training from "./app/training"
+import Method from "./app/method"
+import Warning from "./app/warning"
+import MyVideo from "./app/video"
 
 export class Home extends Component {
     constructor(props) {
@@ -21,12 +22,14 @@ export class Home extends Component {
                 return <Menu />
             case 'inquiry': 
                 return <Inquiry />
-            // case 'training':
-            //     return <Training />
-            // case 'method':
-            //     return <Method />
-            // case 'warning':
-            //     return <Warning />
+            case 'training':
+                return <Training />
+            case 'method':
+                return <Method />
+            case 'warning':
+                return <Warning />
+            case 'video':
+                return <MyVideo />
         }
     }
 }

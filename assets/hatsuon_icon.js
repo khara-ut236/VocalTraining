@@ -6,7 +6,7 @@ import {
     Path
 } from 'react-native-svg';
 
-function HatsuonIcon({height=174.49}) {
+function HatsuonIcon({height=174.49, color="#000"}) {
     var ori_width = 271.31;
     var ori_height = 174.49;
     var width = ori_width * height / ori_height;
@@ -45,43 +45,43 @@ function HatsuonIcon({height=174.49}) {
         </Defs>
         <Use
           fillOpacity="0"
-          stroke="#000"
+          stroke={color}
           strokeWidth="15"
           xlinkHref="#a2ax3b8dg"
         ></Use>
         <Use
           fillOpacity="0"
-          stroke="#000"
+          stroke={color}
           strokeWidth="4"
           xlinkHref="#dtkpCcS0k"
         ></Use>
         <Use
           fillOpacity="0"
-          stroke="#000"
+          stroke={color}
           strokeWidth="15"
           xlinkHref="#a1xQPckq2f"
         ></Use>
         <Use
           fillOpacity="0"
-          stroke="#000"
+          stroke={color}
           strokeWidth="15"
           xlinkHref="#abCFunBQ31"
         ></Use>
         <Use
           fillOpacity="0"
-          stroke="#000"
+          stroke={color}
           strokeWidth="15"
           xlinkHref="#a6axCaPvwc"
         ></Use>
         <Use
           fillOpacity="0"
-          stroke="#000"
+          stroke={color}
           strokeWidth="15"
           xlinkHref="#d6APDkm9ch"
         ></Use>
         <Use
           fillOpacity="0"
-          stroke="#000"
+          stroke={color}
           strokeWidth="15"
           xlinkHref="#ahWvZGDTS"
         ></Use>
