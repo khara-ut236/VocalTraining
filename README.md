@@ -1,1 +1,3 @@
 # VocalTraining
+
+・ReactNative Redux Expo
