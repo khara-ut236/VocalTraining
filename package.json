@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "antd-mobile": "^2.3.3",
     "expo": "~37.0.3",
     "expo-av": "~8.1.0",
     "react": "~16.9.0",
