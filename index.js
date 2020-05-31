@@ -53,20 +53,23 @@ class TabBar extends Component {
         }
     }
     pressIcon(name) {
+        // 本当のページ
         const current_page = this.props.page_name
+        // 表記上のページ
+        const conv_current_page = this.gotoPage(current_page)
         const next_page = this.gotoPage(name)
-        if (current_page != next_page) {
+        if (conv_current_page != next_page) {
             var icon = this.state.icon
-            icon[current_page+"_size"] = this.icon_size
-            icon[current_page+"_color"] = this.base_icon_color
+            icon[conv_current_page+"_size"] = this.icon_size
+            icon[conv_current_page+"_color"] = this.base_icon_color
             icon[next_page+"_size"] = this.clicked_icon_size
             icon[next_page+"_color"] = baseColor
             this.setState({
-                current_page: next_page,
                 icon: icon
             })
+            this.props.movePage(next_page, 1)
         }
-        if (name != current_page) {
+        if (conv_current_page != current_page) {
             this.props.movePage(name, 1)
         }
     }
